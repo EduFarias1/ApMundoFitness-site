@@ -17,7 +17,10 @@ fetch("products.json")
   .then(response => response.json())
   .then(data => {
     products = JSON.parse(localStorage.getItem("apm_products") || "null") || data;
-    renderProducts(products); // ou a função que você já usa para mostrar os produtos
+    renderProducts(products); 
+renderCart();             // já existe, atualiza o carrinho
+renderAdmin?.(products);  // se tiver função para área administrativa
+renderStock?.(products);  // se tiver função para estoque
   })
   .catch(error => {
     console.error("Erro ao carregar products.json:", error);
