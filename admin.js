@@ -120,5 +120,18 @@ document.querySelectorAll(".sidebar nav button").forEach(b=>b.onclick=()=>showVi
 
 function loadSettings(){
   sName.value = config.storeName || "";
-  sInstagram;
+  sInstagram.value = config.instagram || "";
+  sWhatsapp.value = config.whatsapp || "";
+  sTagline.value = config.tagline || "";
+  renderDeliveryRows();
+}
+
+function renderDeliveryRows(){
+  const box = document.getElementById("deliveryRows");
+  box.innerHTML = Object.entries(config.delivery||{}).map(([n,v])=>`
+    <div class="delivery-row">
+      <input class="d-name" value="${n}">
+      <input class="d-value" type="number" step=".01" value="${v}">
+      <button type="button" onclick="this.parentElement.remove()">×</button>
+    </div>`).join("");
 }
