@@ -1,32 +1,6 @@
-const defaultProducts = [
-  {"id": 1, "name": "Blusa Fitness Azul", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Azul", "sizes": {"P": 3, "M": 5, "G": 4, "GG": 1}, "image": "assets/blusa-azul.jpeg", "featured": true},
-  {"id": 2, "name": "Blusa Fitness Lima", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Lima", "sizes": {"P": 2, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-lima.jpeg", "featured": true},
-  {"id": 3, "name": "Blusa Fitness Bordô", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Bordô", "sizes": {"P": 2, "M": 4, "G": 4, "GG": 1}, "image": "assets/blusa-bordo.jpeg", "featured": true},
-  {"id": 4, "name": "Blusa Fitness Verde", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Verde", "sizes": {"P": 3, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-verde.jpeg", "featured": true},
-  {"id": 5, "name": "Blusa Fitness Rosa", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Rosa", "sizes": {"P": 3, "M": 5, "G": 3, "GG": 1}, "image": "assets/blusa-rosa.jpeg", "featured": true},
-  {"id": 6, "name": "Blusa Fitness Cinza", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Cinza", "sizes": {"P": 2, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-cinza.jpeg", "featured": true},
-  {"id": 7, "name": "Short Fitness Essential", "category": "Shorts", "price": 69.9, "salePrice": null, "color": "Preto", "sizes": {"P": 2, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-cinza.jpeg", "featured": false},
-  {"id": 8, "name": "Conjunto Fitness Performance", "category": "Conjuntos", "price": 119.9, "salePrice": null, "color": "Preto", "sizes": {"P": 2, "M": 3, "G": 3, "GG": 1}, "image": "assets/blusa-azul.jpeg", "featured": false},
-
-  // NOVO PRODUTO
-  {"id": 9, "name": "Blusa Fitness Preta", "category": "Blusas", "price": 69.9, "salePrice": null, "color": "Preta", "sizes": {"P": 3, "M": 5, "G": 6, "GG": 2}, "image": "assets/blusa-preta.jpeg", "featured": true}
-];
-const defaultConfig = {"storeName": "ApMundoFitness", "tagline": "Moda fitness feminina para acompanhar seu ritmo.", "whatsapp": "5585984041477", "instagram": "@apmundofitness", "delivery": {"Retirada na loja": 0, "Entrega local": 10, "Entrega expressa": 15}, "adminUser": "andreapaula", "adminPassword": "2707"};
-// Carregar produtos do products.json primeiro
-fetch("products.json")
-  .then(response => response.json())
-  .then(data => {
-    products = JSON.parse(localStorage.getItem("apm_products") || "null") || data;
-    renderProducts(products); 
-renderCart();             // já existe, atualiza o carrinho
-renderAdmin?.(products);  // se tiver função para área administrativa
-renderStock?.(products);  // se tiver função para estoque
-  })
-  .catch(error => {
-    console.error("Erro ao carregar products.json:", error);
-    products = defaultProducts; // fallback se der erro
-    renderProducts(products);
-  });
+const defaultProducts = [{"id": 1, "name": "Blusa Fitness Azul", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Azul", "sizes": {"P": 3, "M": 5, "G": 4, "GG": 1}, "image": "assets/blusa-azul.jpeg", "featured": true}, {"id": 2, "name": "Blusa Fitness Lima", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Lima", "sizes": {"P": 2, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-lima.jpeg", "featured": true}, {"id": 3, "name": "Blusa Fitness Bordô", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Bordô", "sizes": {"P": 2, "M": 4, "G": 4, "GG": 1}, "image": "assets/blusa-bordo.jpeg", "featured": true}, {"id": 4, "name": "Blusa Fitness Verde", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Verde", "sizes": {"P": 3, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-verde.jpeg", "featured": true}, {"id": 5, "name": "Blusa Fitness Rosa", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Rosa", "sizes": {"P": 3, "M": 5, "G": 3, "GG": 1}, "image": "assets/blusa-rosa.jpeg", "featured": true}, {"id": 6, "name": "Blusa Fitness Cinza", "category": "Blusas", "price": 59.9, "salePrice": null, "color": "Cinza", "sizes": {"P": 2, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-cinza.jpeg", "featured": true}, {"id": 7, "name": "Short Fitness Essential", "category": "Shorts", "price": 69.9, "salePrice": null, "color": "Preto", "sizes": {"P": 2, "M": 4, "G": 3, "GG": 1}, "image": "assets/blusa-cinza.jpeg", "featured": false}, {"id": 8, "name": "Conjunto Fitness Performance", "category": "Conjuntos", "price": 119.9, "salePrice": null, "color": "Preto", "sizes": {"P": 2, "M": 3, "G": 3, "GG": 1}, "image": "assets/blusa-azul.jpeg", "featured": false}];
+const defaultConfig = {"storeName": "ApMundoFitness", "tagline": "Moda fitness feminina para acompanhar seu ritmo.", "whatsapp": "5599999999999", "instagram": "@apmundofitness", "delivery": {"Retirada na loja": 0, "Entrega local": 10, "Entrega expressa": 15}, "adminUser": "andreapaula", "adminPassword": "2707"};
+let products = JSON.parse(localStorage.getItem("apm_products") || "null") || defaultProducts;
 let config = JSON.parse(localStorage.getItem("apm_config") || "null") || defaultConfig;
 let cart = JSON.parse(localStorage.getItem("apm_cart") || "[]");
 let payment = "PIX";
@@ -141,12 +115,3 @@ document.getElementById("whatsappContact").onclick=()=>{const phone=(config.what
 document.getElementById("goProducts").onclick=closeCart;
 document.getElementById("menuBtn").onclick=()=>alert("No celular, use as categorias e os links do rodapé para navegar. O menu completo será expandido na próxima etapa.");
 loadConfig();renderProducts();renderCart();
-// Botão de contato direto
-document.getElementById("whatsappContact").addEventListener("click", function() {
-  window.open("https://wa.me/5585SEUNUMERO?text=Olá%20quero%20falar%20sobre%20os%20produtos", "_blank");
-});
-
-// Botão de finalizar compra
-document.getElementById("checkoutBtn").addEventListener("click", function() {
-  window.open("https://wa.me/5585984041477?text=Olá%20quero%20finalizar%20minha%20compra", "_blank");
-});
