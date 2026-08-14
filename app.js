@@ -115,3 +115,12 @@ document.getElementById("whatsappContact").onclick=()=>{const phone=(config.what
 document.getElementById("goProducts").onclick=closeCart;
 document.getElementById("menuBtn").onclick=()=>alert("No celular, use as categorias e os links do rodapé para navegar. O menu completo será expandido na próxima etapa.");
 loadConfig();renderProducts();renderCart();
+// Botão de contato direto
+document.getElementById("whatsappContact").addEventListener("click", function() {
+  window.open("https://wa.me/5585SEUNUMERO?text=Olá%20quero%20falar%20sobre%20os%20produtos", "_blank");
+});
+
+// Botão de finalizar compra
+document.getElementById("checkoutBtn").addEventListener("click", function() {
+  window.open("https://wa.me/5585984041477?text=Olá%20quero%20finalizar%20minha%20compra", "_blank");
+});
