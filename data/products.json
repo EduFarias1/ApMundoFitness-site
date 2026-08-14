@@ -126,5 +126,24 @@
     },
     "image": "assets/blusa-azul.jpeg",
     "featured": false
+
+    },
+    {
+    "id": 9,
+    "name": "Blusa Fitness Preta",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Preta",
+    "sizes": {
+      "P": 3,
+      "M": 5,
+      "G": 4,
+      "GG": 1
+    },
+    "image": "assets/blusa-preta.jpeg",
+    "featured":false
+
+    
   }
 ]
