@@ -12,7 +12,18 @@ const defaultProducts = [
   {"id": 9, "name": "Blusa Fitness Preta", "category": "Blusas", "price": 69.9, "salePrice": null, "color": "Preta", "sizes": {"P": 3, "M": 5, "G": 6, "GG": 2}, "image": "assets/blusa-preta.jpeg", "featured": true}
 ];
 const defaultConfig = {"storeName": "ApMundoFitness", "tagline": "Moda fitness feminina para acompanhar seu ritmo.", "whatsapp": "5585984041477", "instagram": "@apmundofitness", "delivery": {"Retirada na loja": 0, "Entrega local": 10, "Entrega expressa": 15}, "adminUser": "andreapaula", "adminPassword": "2707"};
-let products = JSON.parse(localStorage.getItem("apm_products") || "null") || defaultProducts;
+// Carregar produtos do products.json primeiro
+fetch("products.json")
+  .then(response => response.json())
+  .then(data => {
+    products = JSON.parse(localStorage.getItem("apm_products") || "null") || data;
+    renderProducts(products); // ou a função que você já usa para mostrar os produtos
+  })
+  .catch(error => {
+    console.error("Erro ao carregar products.json:", error);
+    products = defaultProducts; // fallback se der erro
+    renderProducts(products);
+  });
 let config = JSON.parse(localStorage.getItem("apm_config") || "null") || defaultConfig;
 let cart = JSON.parse(localStorage.getItem("apm_cart") || "[]");
 let payment = "PIX";
