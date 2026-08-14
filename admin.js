@@ -120,4 +120,5 @@ document.querySelectorAll(".sidebar nav button").forEach(b=>b.onclick=()=>showVi
 
 function loadSettings(){
   sName.value = config.storeName || "";
-  sInstagram
+  sInstagram;
+}
