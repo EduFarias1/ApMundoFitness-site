@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ApMundoFitness — moda fitness feminina moderna, confortável e cheia de atitude.">
+<title>ApMundoFitness | Moda Fitness Feminina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="announcement">✨ NOVA COLEÇÃO • Escolha seu look e finalize seu pedido pelo WhatsApp</div>
+
+<header class="header">
+  <a class="brand" href="#inicio">
+    <img src="assets/logo.jpeg" alt="ApMundoFitness">
+    <div><strong>ApMundo<span>Fitness</span></strong><small>ROUPA FITNESS</small></div>
+  </a>
+  <nav class="desktop-nav">
+    <a href="#inicio">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#blusas">Blusas</a>
+    <a href="#shorts">Shorts</a>
+    <a href="#conjuntos">Conjuntos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Buscar">⌕</button>
+    <button class="icon-btn cart-btn" id="cartBtn" aria-label="Carrinho">🛒<b id="cartCount">0</b></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<div class="search-panel" id="searchPanel">
+  <input id="searchInput" type="search" placeholder="Busque por blusas, shorts, conjuntos...">
+</div>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <span class="eyebrow">APMUNDOFITNESS</span>
+    <h1>Vista sua<br><em>melhor versão.</em></h1>
+    <p>Moda fitness feminina para treinar, se movimentar e se sentir incrível em todos os momentos.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#produtos">VER PRODUTOS <span>→</span></a>
+      <a class="btn btn-ghost" href="#contato">FALAR COM A ANDREA</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="hero-glow"></div>
+    <img src="assets/blusa-rosa.jpeg" alt="Moda fitness feminina ApMundoFitness">
+    <div class="hero-badge"><strong>NEW</strong><span>COLLECTION</span></div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><span>⚡</span><div><strong>Estilo & movimento</strong><small>Looks pensados para sua rotina</small></div></div>
+  <div><span>✓</span><div><strong>Compra fácil</strong><small>Escolha no site e finalize pelo WhatsApp</small></div></div>
+  <div><span>♡</span><div><strong>Atendimento próximo</strong><small>Fale diretamente com a Andrea</small></div></div>
+</section>
+
+<section class="section" id="produtos">
+  <div class="section-head">
+    <div><span class="eyebrow">EXPLORE</span><h2>Escolha seu <em>look.</em></h2></div>
+    <div class="filters">
+      <button class="filter active" data-filter="Todos">Todos</button>
+      <button class="filter" data-filter="Blusas">Blusas</button>
+      <button class="filter" data-filter="Shorts">Shorts</button>
+      <button class="filter" data-filter="Conjuntos">Conjuntos</button>
+    </div>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="editorial">
+  <div class="editorial-img"><img src="assets/blusa-lima.jpeg" alt="Coleção fitness"></div>
+  <div class="editorial-copy">
+    <span class="eyebrow">DO SEU JEITO</span>
+    <h2>Treine forte.<br><em>Vista sua atitude.</em></h2>
+    <p>Peças para acompanhar seu ritmo com cores, conforto e personalidade. Descubra os modelos disponíveis na ApMundoFitness.</p>
+    <a class="btn btn-dark" href="#produtos">CONFERIR COLEÇÃO →</a>
+  </div>
+</section>
+
+<section class="about" id="contato">
+  <div>
+    <span class="eyebrow">APMUNDOFITNESS</span>
+    <h2>Feito para mulheres que <em>se movimentam.</em></h2>
+    <p>A ApMundoFitness é uma loja de moda fitness feminina criada para unir estilo, praticidade e confiança. Escolha suas peças, monte seu carrinho e fale diretamente com a Andrea para concluir o pedido.</p>
+  </div>
+  <div class="contact-card">
+    <span class="contact-label">CEO / PROPRIETÁRIA</span>
+    <h3>Andrea de Paula Abreu</h3>
+    <a id="instagramLink" href="#" target="_blank">Instagram · <span id="instagramText">@apmundofitness</span></a>
+    <button class="btn btn-primary full" id="whatsappContact">FALAR NO WHATSAPP →</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="assets/logo.jpeg" alt="Logo ApMundoFitness"><div><strong>ApMundoFitness</strong><small>Moda fitness feminina</small></div></div>
+  <div class="footer-links"><a href="#produtos">Produtos</a><a href="#contato">Contato</a><a href="admin.html">Área administrativa</a></div>
+  <p>© <span id="year"></span> ApMundoFitness. Todos os direitos reservados.</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head"><div><span class="eyebrow">SEU PEDIDO</span><h2>Meu carrinho</h2></div><button class="close" id="closeCart">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-empty" id="cartEmpty"><div>🛍️</div><p>Seu carrinho está vazio.</p><a href="#produtos" id="goProducts">COMEÇAR A COMPRAR</a></div>
+  <div class="cart-summary" id="cartSummary">
+    <div class="line"><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
+    <label>Entrega
+      <select id="deliverySelect"></select>
+    </label>
+    <div class="line total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+    <div class="pay-title">Forma de pagamento</div>
+    <div class="payments">
+      <button data-pay="PIX" class="pay active">PIX</button><button data-pay="Dinheiro" class="pay">Dinheiro</button><button data-pay="Crédito" class="pay">Crédito</button><button data-pay="Débito" class="pay">Débito</button>
+    </div>
+    <button class="btn btn-primary full" id="checkoutBtn">FINALIZAR PELO WHATSAPP →</button>
+  </div>
+</aside>
+
+<div class="product-modal" id="productModal">
+  <div class="modal-box">
+    <button class="close modal-close" id="modalClose">×</button>
+    <div class="modal-product" id="modalProduct"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

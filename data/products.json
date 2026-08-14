@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Blusa Fitness Azul",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Azul",
+    "sizes": {
+      "P": 3,
+      "M": 5,
+      "G": 4,
+      "GG": 1
+    },
+    "image": "assets/blusa-azul.jpeg",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Blusa Fitness Lima",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Lima",
+    "sizes": {
+      "P": 2,
+      "M": 4,
+      "G": 3,
+      "GG": 1
+    },
+    "image": "assets/blusa-lima.jpeg",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Blusa Fitness Bordô",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Bordô",
+    "sizes": {
+      "P": 2,
+      "M": 4,
+      "G": 4,
+      "GG": 1
+    },
+    "image": "assets/blusa-bordo.jpeg",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "Blusa Fitness Verde",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Verde",
+    "sizes": {
+      "P": 3,
+      "M": 4,
+      "G": 3,
+      "GG": 1
+    },
+    "image": "assets/blusa-verde.jpeg",
+    "featured": true
+  },
+  {
+    "id": 5,
+    "name": "Blusa Fitness Rosa",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Rosa",
+    "sizes": {
+      "P": 3,
+      "M": 5,
+      "G": 3,
+      "GG": 1
+    },
+    "image": "assets/blusa-rosa.jpeg",
+    "featured": true
+  },
+  {
+    "id": 6,
+    "name": "Blusa Fitness Cinza",
+    "category": "Blusas",
+    "price": 59.9,
+    "salePrice": null,
+    "color": "Cinza",
+    "sizes": {
+      "P": 2,
+      "M": 4,
+      "G": 3,
+      "GG": 1
+    },
+    "image": "assets/blusa-cinza.jpeg",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "name": "Short Fitness Essential",
+    "category": "Shorts",
+    "price": 69.9,
+    "salePrice": null,
+    "color": "Preto",
+    "sizes": {
+      "P": 2,
+      "M": 4,
+      "G": 3,
+      "GG": 1
+    },
+    "image": "assets/blusa-cinza.jpeg",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "Conjunto Fitness Performance",
+    "category": "Conjuntos",
+    "price": 119.9,
+    "salePrice": null,
+    "color": "Preto",
+    "sizes": {
+      "P": 2,
+      "M": 3,
+      "G": 3,
+      "GG": 1
+    },
+    "image": "assets/blusa-azul.jpeg",
+    "featured": false
+  }
+]

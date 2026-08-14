@@ -1,0 +1,13 @@
+{
+  "storeName": "ApMundoFitness",
+  "tagline": "Moda fitness feminina para acompanhar seu ritmo.",
+  "whatsapp": "5599999999999",
+  "instagram": "@apmundofitness",
+  "delivery": {
+    "Retirada na loja": 0,
+    "Entrega local": 10,
+    "Entrega expressa": 15
+  },
+  "adminUser": "andreapaula",
+  "adminPassword": "2707"
+}

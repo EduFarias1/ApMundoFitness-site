@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Admin | ApMundoFitness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="login" class="login-screen">
+  <div class="login-card"><img src="assets/logo.jpeg"><span>APMUNDOFITNESS</span><h1>Área administrativa</h1><p>Gerencie produtos, estoque, preços e pedidos.</p>
+    <form id="loginForm"><label>Login<input id="user" required autocomplete="username"></label><label>Senha<input id="pass" type="password" required autocomplete="current-password"></label><button>ENTRAR</button><small id="loginError"></small></form>
+    <a href="index.html">← Voltar para a loja</a>
+  </div>
+</div>
+<div id="app" class="app hidden">
+  <aside class="sidebar"><div class="admin-brand"><img src="assets/logo.jpeg"><strong>ApMundo<span>Fitness</span></strong></div>
+    <nav><button data-view="dashboard" class="active">▦ Dashboard</button><button data-view="products">▣ Produtos</button><button data-view="settings">⚙ Configurações</button></nav>
+    <a href="index.html">↗ Ver loja</a><button id="logout" class="logout">Sair</button>
+  </aside>
+  <main class="main">
+    <header><div><span>PAINEL</span><h2 id="viewTitle">Dashboard</h2></div><button id="mobileLogout">Sair</button></header>
+    <section id="dashboard" class="view">
+      <div class="stats"><div><span>Produtos</span><strong id="statProducts">0</strong></div><div><span>Estoque</span><strong id="statStock">0</strong></div><div><span>Disponíveis</span><strong id="statAvailable">0</strong></div></div>
+      <div class="panel"><div class="panel-head"><div><span>CATÁLOGO</span><h3>Produtos cadastrados</h3></div><button class="primary" onclick="openEditor()">+ NOVO PRODUTO</button></div><div id="dashboardList"></div></div>
+    </section>
+    <section id="products" class="view hidden"><div class="panel"><div class="panel-head"><div><span>GERENCIAMENTO</span><h3>Produtos</h3></div><button class="primary" onclick="openEditor()">+ NOVO PRODUTO</button></div><div id="productsList"></div></div></section>
+    <section id="settings" class="view hidden"><div class="panel"><div class="panel-head"><div><span>LOJA</span><h3>Configurações</h3></div></div>
+      <form id="settingsForm" class="form-grid"><label>Nome da loja<input id="sName"></label><label>Instagram<input id="sInstagram"></label><label>WhatsApp (com DDI)<input id="sWhatsapp" placeholder="5511999999999"></label><label>Frase da loja<input id="sTagline"></label>
+      <div class="fullrow"><h4>Taxas de entrega</h4><div id="deliveryRows"></div><button type="button" class="secondary" id="addDelivery">+ Adicionar taxa</button></div>
+      <button class="primary fullrow" type="submit">SALVAR CONFIGURAÇÕES</button></form>
+    </div></section>
+  </main>
+</div>
+<div class="modal" id="editorModal"><div class="editor"><button class="x" onclick="closeEditor()">×</button><span>CATÁLOGO</span><h2 id="editorTitle">Novo produto</h2>
+<form id="productForm" class="form-grid"><input type="hidden" id="pId"><label>Nome<input id="pName" required></label><label>Categoria<select id="pCategory"><option>Blusas</option><option>Shorts</option><option>Conjuntos</option></select></label><label>Preço<input id="pPrice" type="number" step=".01" required></label><label>Preço promocional<input id="pSale" type="number" step=".01"></label><label>Cor<input id="pColor" required></label><label>Imagem (arquivo já usado no projeto)<select id="pImage"><option value="assets/blusa-azul.jpeg">Azul</option><option value="assets/blusa-lima.jpeg">Lima</option><option value="assets/blusa-bordo.jpeg">Bordô</option><option value="assets/blusa-verde.jpeg">Verde</option><option value="assets/blusa-rosa.jpeg">Rosa</option><option value="assets/blusa-cinza.jpeg">Cinza</option></select></label>
+<div class="fullrow"><h4>Estoque por tamanho</h4><div class="sizes"><label>P<input id="sizeP" type="number" min="0"></label><label>M<input id="sizeM" type="number" min="0"></label><label>G<input id="sizeG" type="number" min="0"></label><label>GG<input id="sizeGG" type="number" min="0"></label></div></div>
+<label class="check fullrow"><input id="pFeatured" type="checkbox"> Destacar produto na loja</label>
+<button class="primary fullrow">SALVAR PRODUTO</button></form></div></div>
+<script src="admin.js"></script>
+</body></html>
